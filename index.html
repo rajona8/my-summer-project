@@ -3,91 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knoll & Walters | Law Firm</title>
+    <title>Knoll & Walters LLP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Navigation Bar -->
+    <!-- Header Navigation -->
     <header>
-        <div class="logo">KNOLL & WALTERS</div>
+        <div class="logo-container">
+            <div class="logo-icon"></div>
+            <span class="logo-text">KNOLL & WALTERS LLP</span>
+        </div>
         <nav>
-            <a href="#about">About Us</a>
-            <a href="#services">Practice Areas</a>
-            <a href="#attorneys">Attorneys</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#" onclick="showSection('home')">HOME</a>
+            <a href="#" onclick="showSection('practice')">PRACTICE AREAS</a>
+            <a href="#" onclick="showSection('vision')">OUR VISION</a>
+            <a href="#" onclick="showSection('attorneys')">ATTORNEYS</a>
+            <a href="#" onclick="showSection('contact')">CONTACT</a>
         </nav>
     </header>
 
-    <!-- Hero Section / Main Banner -->
-    <section class="hero">
-        <div class="hero-content">
-            <p class="subtitle">ATTORNEYS AT LAW</p>
-            <h1>Legal Counsel & Representation</h1>
-            <p class="description">Providing high-caliber legal guidance and strategic advocacy for corporate and individual clients.</p>
-            <a href="#contact" class="btn">Book a Consultation</a>
+    <!-- Main Hero Banner -->
+    <section id="home" class="hero tab-section">
+        <div class="hero-left">
+            <h1>BOUTIQUE<br>LAW FIRM</h1>
+            <p>Specializing in Commercial Law & Litigation, Insolvency & Fraud</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Our Firm</h2>
-            <p>At Knoll & Walters, we are committed to delivering tailored legal solutions with integrity, precision, and efficiency. Our attorneys bring decades of experience across diverse legal disciplines.</p>
-        </div>
+        <div class="hero-right" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80');"></div>
     </section>
 
     <!-- Practice Areas Grid -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Practice Areas</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Corporate & Business</h3>
-                    <p>Advising companies on governance, contracts, business formation, and compliance.</p>
-                </div>
-                <div class="card">
-                    <h3>Commercial Litigation</h3>
-                    <p>Representing clients in complex financial and contractual dispute resolutions.</p>
-                </div>
-                <div class="card">
-                    <h3>Real Estate Law</h3>
-                    <p>Handling commercial real estate transactions, land use, zoning, and leasing.</p>
-                </div>
+    <section id="practice" class="practice-section tab-section">
+        <div class="practice-left">
+            <h2>PRACTICE<br>AREAS</h2>
+        </div>
+        <div class="practice-right">
+            <div class="service-card">
+                <h3><span class="square-icon"></span> LITIGATION</h3>
+                <p>Providing strategic representation for corporate and commercial dispute resolutions.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="square-icon"></span> BUSINESS</h3>
+                <p>Advising corporations on regulatory compliance, contracts, and governance.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="square-icon"></span> INSOLVENCY</h3>
+                <p>Guiding businesses through financial restructuring and debt resolution management.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="square-icon"></span> FRAUD</h3>
+                <p>Protecting corporate assets and investigating white-collar financial matters.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="square-icon"></span> DISPUTE RESOLUTION</h3>
+                <p>Handling financial negotiations and corporate litigation cases.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="square-icon"></span> TAX</h3>
+                <p>Strategic tax advisory and corporate regulatory legal services.</p>
             </div>
         </div>
     </section>
 
-    <!-- Attorneys Section -->
-    <section id="attorneys" class="attorneys">
-        <div class="container">
-            <h2>Our Partners</h2>
-            <div class="grid">
-                <div class="card profile">
-                    <div class="avatar">JK</div>
-                    <h3>James Knoll</h3>
-                    <p class="role">Senior Partner</p>
-                </div>
-                <div class="card profile">
-                    <div class="avatar">SW</div>
-                    <h3>Sarah Walters</h3>
-                    <p class="role">Managing Partner</p>
-                </div>
+    <!-- Our Vision Section -->
+    <section id="vision" class="vision-section tab-section">
+        <div class="vision-container">
+            <h2>OUR VISION</h2>
+            <p>Our vision is to deliver high-caliber legal counsel defined by integrity, precision, and relentless defense of our clients' corporate and commercial interests.</p>
+        </div>
+    </section>
+
+    <!-- Attorneys Section (3 Profiles with Photos and Phone Numbers) -->
+    <section id="attorneys" class="attorneys-section tab-section">
+        <h2>OUR ATTORNEYS</h2>
+        <div class="attorney-grid">
+            <div class="attorney-card">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="James Knoll">
+                <h3>James Knoll</h3>
+                <p class="role">Senior Partner</p>
+                <p class="phone">📞 (555) 019-2831</p>
+            </div>
+            <div class="attorney-card">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Sarah Walters">
+                <h3>Sarah Walters</h3>
+                <p class="role">Managing Partner</p>
+                <p class="phone">📞 (555) 019-2832</p>
+            </div>
+            <div class="attorney-card">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Michael Davis">
+                <h3>Michael Davis</h3>
+                <p class="role">Associate Attorney</p>
+                <p class="phone">📞 (555) 019-2833</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Footer -->
-    <footer id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>500 Fifth Avenue, New York, NY 10110</p>
-            <p>Email: info@knollwalters.com | Phone: (555) 019-2831</p>
-            <div class="copyright">
-                <p>&copy; 2026 Knoll & Walters Law Firm. All Rights Reserved.</p>
+    <!-- Complete Contact Section -->
+    <section id="contact" class="tab-section">
+        <div class="contact-wrapper">
+            <div class="contact-header-title">
+                <h2>CONTACT<br>KNOLL &<br>WALTERS</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="address-box">
+                    <h3>OUR ADDRESS</h3>
+                    <p>500 Terry Francine St. San Francisco, CA 94158</p>
+                    <p><strong>Email:</strong> info@mysite.com</p>
+                    <p><strong>Tel:</strong> 123-456-7890</p>
+                    <a href="#" class="find-us-link">Click Here to Find Us</a>
+                </div>
+
+                <p class="form-instruction">For any general inquiries, please fill in the following contact form:</p>
+
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
             </div>
         </div>
-    </footer>
 
+        <!-- Back to Home Button -->
+        <div class="back-to-home-container">
+            <button onclick="showSection('home')" class="back-to-home-btn">
+                <span class="arrow-up">∧</span>
+                <span>BACK TO HOME</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating Chat Button -->
+    <div class="chat-widget" onclick="toggleChatBox()">
+        CHAT WITH US!
+    </div>
+
+    <!-- Popup Chat Box Window -->
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <div>
+                <h4>CHAT WITH US!</h4>
+                <p><span class="online-dot">●</span> We'll reply as soon as we can</p>
+            </div>
+            <button class="close-chat" onclick="toggleChatBox()">✕</button>
+        </div>
+        <div class="chat-body">
+            <!-- Chat interaction zone -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Write your message...">
+        </div>
+    </div>
+
+    <!-- JavaScript Controls -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.tab-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+
+        function toggleChatBox() {
+            const chatBox = document.getElementById('chatBox');
+            if (chatBox.style.display === 'flex') {
+                chatBox.style.display = 'none';
+            } else {
+                chatBox.style.display = 'flex';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
 </body>
 </html>

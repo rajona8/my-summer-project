@@ -1,4 +1,4 @@
-/* General Reset */
+/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +11,21 @@ body {
     background-color: #ffffff;
 }
 
+/* Tab Display Switcher Rules */
+.tab-section {
+    display: none;
+}
+
+.hero.tab-section[style*="display: block"],
+.practice-section.tab-section[style*="display: block"],
+.vision-section.tab-section[style*="display: block"] {
+    display: flex !important;
+}
+
+#contact.tab-section[style*="display: block"] {
+    display: block !important;
+}
+
 /* Header Navbar */
 header {
     display: flex;
@@ -18,6 +33,7 @@ header {
     align-items: center;
     padding: 25px 60px;
     background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .logo-container {
@@ -26,7 +42,6 @@ header {
     gap: 12px;
 }
 
-/* Geometric Logo Symbol */
 .logo-icon {
     width: 28px;
     height: 28px;
@@ -53,20 +68,20 @@ header nav a {
     font-weight: 600;
 }
 
-header nav a.active, header nav a:hover {
+header nav a:hover {
     color: #0d3b66;
 }
 
-/* Hero Section */
+/* Hero Banner Section */
 .hero {
     display: flex;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
 }
 
 .hero-left {
     width: 40%;
-    background-color: rgba(13, 59, 102, 0.85);
+    background-color: rgba(13, 59, 102, 0.95);
     color: #ffffff;
     padding: 80px 50px;
     display: flex;
@@ -90,10 +105,13 @@ header nav a.active, header nav a:hover {
 
 .hero-right {
     width: 60%;
-    background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* Practice Areas Section */
+/* Practice Areas Grid */
 .practice-section {
     display: flex;
     min-height: 80vh;
@@ -146,20 +164,223 @@ header nav a.active, header nav a:hover {
 /* Vision Section */
 .vision-section {
     background-color: #0d3b66;
-    height: 60vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 80px 20px;
 }
 
-.vision-section h2 {
+.vision-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.vision-container h2 {
     color: #ffffff;
-    font-size: 42px;
-    letter-spacing: 4px;
-    font-weight: 500;
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
 }
 
-/* Chat Widget */
+.vision-container p {
+    color: #f1f5f9;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Attorneys Section */
+.attorneys-section {
+    min-height: 80vh;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.attorneys-section h2 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #0d3b66;
+    margin-bottom: 40px;
+}
+
+.attorney-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.attorney-card {
+    width: 280px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.attorney-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.attorney-card h3 {
+    color: #0d3b66;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.attorney-card .role {
+    color: #00b4d8;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.attorney-card .phone {
+    color: #4a5568;
+    font-size: 14px;
+}
+
+/* Contact Section Full Layout */
+#contact.tab-section {
+    background-color: #0d3b66;
+    color: #ffffff;
+    padding: 60px 40px 30px 40px;
+    min-height: 90vh;
+}
+
+.contact-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.contact-header-title {
+    width: 35%;
+}
+
+.contact-header-title h2 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.contact-content {
+    width: 65%;
+}
+
+.address-box h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.address-box p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+.find-us-link {
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.form-instruction {
+    margin: 30px 0 20px 0;
+    font-size: 14px;
+    color: #e2e8f0;
+}
+
+/* Contact Form Elements */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ffffff;
+}
+
+.submit-btn {
+    background-color: #051d38;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ffffff;
+    color: #0d3b66;
+}
+
+/* Back to Home Button */
+.back-to-home-container {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-to-home-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.arrow-up {
+    font-size: 18px;
+}
+
+/* Floating Chat Trigger Button */
 .chat-widget {
     position: fixed;
     bottom: 20px;
@@ -171,5 +392,142 @@ header nav a.active, header nav a:hover {
     letter-spacing: 1.5px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Popup Chat Window */
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    flex-direction: column;
+    z-index: 1001;
+}
+
+.chat-header {
+    background-color: #0d3b66;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chat-header h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.chat-header p {
+    font-size: 11px;
+    color: #cbd5e1;
+    margin-top: 4px;
+}
+
+.online-dot {
+    color: #22c55e;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.chat-body {
+    flex: 1;
+    background-color: #f1f5f9;
+    padding: 15px;
+}
+
+.chat-footer {
+    padding: 10px;
+    border-top: 1px solid #e2e8f0;
+    background-color: #ffffff;
+}
+
+.chat-footer input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 13px;
+}
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+    }
+
+    .hero-left {
+        padding: 40px 20px;
+    }
+
+    .hero-right {
+        height: 300px;
+    }
+
+    /* Practice Areas */
+    .practice-section {
+        flex-direction: column;
+    }
+
+    .practice-left, .practice-right {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .practice-right {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-header-title, .contact-content {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Chat Widget Adjustment */
+    .chat-box {
+        width: 90%;
+        right: 5%;
+        bottom: 10px;
+    }
 }
