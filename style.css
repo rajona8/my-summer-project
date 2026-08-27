@@ -1,55 +1,218 @@
+/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Georgia', serif;
-    background-color: #f9f9f9;
-    color: #222;
+    background-color: #fdfdfd;
+    color: #2c2c2c;
     line-height: 1.6;
 }
+
+/* Container Wrapper */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navbar */
 header {
     background-color: #111827;
-    color: #fff;
+    color: #ffffff;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+header .logo {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #c5a059;
+}
+
+header nav a {
+    color: #ffffff !important;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #c5a059 !important;
+}
+
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('...');
+    background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), 
+                url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
 }
+
+.hero .subtitle {
+    color: #c5a059;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.hero .description {
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    font-size: 17px;
+    color: #e5e7eb;
+}
+
+/* Gold Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #c5a059;
+    color: #111827 !important;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b08c45;
+}
+
+/* General Content Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #111827;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about {
+    background-color: #ffffff;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4b5563;
+}
+
+/* Practice Areas & Attorneys Grid */
+.services, .attorneys {
+    background-color: #f3f4f6;
+}
+
 .grid {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .card {
-    background: white;
-    padding: 30px;
+    background: #ffffff;
+    padding: 35px 25px;
     border: 1px solid #e5e7eb;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}.grid {
+    width: 320px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    text-align: center;
+}
+
+.card h3 {
+    color: #111827;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Attorney Profiles */
+.card.profile .avatar {
+    width: 70px;
+    height: 70px;
+    background-color: #111827;
+    color: #c5a059;
+    border-radius: 50%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border: 1px solid #e5e7eb;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+.card .role {
+    color: #c5a059;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
 }
+
+/* Footer Section */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 50px 20px 30px 20px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #c5a059;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+footer p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+footer .copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #1f2937;
+    font-size: 13px;
+    color: #6b7280;
+}
+   
