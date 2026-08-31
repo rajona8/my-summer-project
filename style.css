@@ -1,4 +1,8 @@
-/* Universal Reset */
+/* Universal Reset & Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,23 +15,33 @@ body {
     background-color: #ffffff;
 }
 
-/* Tab Display Switcher Rules */
+/* Scrollable Section Display Rules */
 .tab-section {
-    display: none;
+    width: 100%;
 }
 
-.hero.tab-section[style*="display: block"],
-.practice-section.tab-section[style*="display: block"],
-.vision-section.tab-section[style*="display: block"] {
+.hero.tab-section {
     display: flex !important;
 }
 
-#contact.tab-section[style*="display: block"] {
+.practice-section.tab-section {
+    display: flex !important;
+}
+
+.vision-section.tab-section {
+    display: flex !important;
+}
+
+.attorneys-section.tab-section,
+#contact.tab-section {
     display: block !important;
 }
 
 /* Header Navbar */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -374,6 +388,7 @@ header nav a:hover {
     gap: 5px;
     font-size: 12px;
     letter-spacing: 2px;
+    text-decoration: none;
 }
 
 .arrow-up {
@@ -461,9 +476,9 @@ header nav a:hover {
     padding: 8px;
     font-size: 13px;
 }
+
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-    /* Header & Navigation */
     header {
         flex-direction: column;
         gap: 15px;
@@ -477,7 +492,6 @@ header nav a:hover {
         gap: 12px;
     }
 
-    /* Hero Section */
     .hero {
         flex-direction: column;
         height: auto;
@@ -495,7 +509,6 @@ header nav a:hover {
         height: 300px;
     }
 
-    /* Practice Areas */
     .practice-section {
         flex-direction: column;
     }
@@ -509,7 +522,6 @@ header nav a:hover {
         grid-template-columns: 1fr;
     }
 
-    /* Contact Section */
     .contact-wrapper {
         flex-direction: column;
         gap: 30px;
@@ -524,7 +536,6 @@ header nav a:hover {
         gap: 15px;
     }
 
-    /* Chat Widget Adjustment */
     .chat-box {
         width: 90%;
         right: 5%;
